@@ -29,9 +29,10 @@
 	<li class="nav-item">
 	<a class="nav-link" href="index.php?name=contactForm">Contact Form</a>
 	</li>
-	<li class="nav-item">
-	<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <li class="nav-item">
+	<a class="nav-link" href="index.php?name=mail">Email</a>
 	</li>
+	
 	</ul>
 	</div>
 	</div>
