@@ -12,10 +12,10 @@
 <?php
 $get_num= $_POST["number"];
 if($get_num%2==0){
-    echo "The Number is Even";
+    echo "The Number is Even".$get_num;
 }
 else{
-    echo "The number is odd";
+    echo "The number is odd".$get_num;
 }
 
 ?>

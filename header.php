@@ -32,6 +32,9 @@
     <li class="nav-item">
 	<a class="nav-link" href="index.php?name=mail">Email</a>
 	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="index.php?name=posts">Posts</a>
+	</li>
 	
 	</ul>
 	</div>

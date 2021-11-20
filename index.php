@@ -26,6 +26,10 @@ if($_GET["name"]=="mail"){
     include("mail.php");
 
 }
+if($_GET["name"]=="posts"){
+    include("posts.php");
+
+}
 ?>
 
 </div>
