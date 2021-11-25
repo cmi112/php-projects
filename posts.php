@@ -1,30 +1,29 @@
 <?php 
-$servername = "localhost";
-$database = "posts";
-$username = "root";
-$password = "root";
-$conn=mysqli_connect($servername,$username, $password, $database);
-if(isset($_POST['submit']))
-{    
-     $title = $_POST['title'];
-     $content = $_POST['content'];
-   
 
-     $sql = "INSERT INTO `users_posts`VALUES ('$title','$content')";
-     if (mysqli_query($conn, $sql)) {
-        echo "New record has been added successfully !";
-     } else {
-        echo "Error: " . $sql . ":-" . mysqli_error($conn);
-     }
-     mysqli_close($conn);
+
+// Adding session message
+session_start();
+
+// Connecting Database
+$mysqli=new mysqli('localhost','root','root','contactform') or die(mysqli_error($mysqli));
+
+if(isset($_POST['submit'])){
+    $title=$_POST['title'];
+    $content=$_POST['content'];
+// Inserting values
+$mysqli->query("INSERT INTO `post`(`id`, `title`, `content`, `author`) VALUES ('','$title','$content','$author')") or die($mysqli->error);
+      // Adding session msg
+      $_SESSION['message']="Record has been saved !";
+      $_SESSION['msg_type']="success";
+      header("location:index.php");
 }
-
 
 ?>
 <div class="container">
     <form action="posts.php" method="POST">
         <input type="text" class="form-control" name="title" >
         <textarea name="content"  class="form-control" cols="30" rows="10"></textarea>
+        <input type="text" class="form-control" name="author" >
         <input type="submit" >
     </form>
 </div>

@@ -1,21 +1,27 @@
-<form action="index.php/evenOdd.php" method="post">
+
+<div class="container">
+<form action="evenOdd.php" method="post">
 <input type="number" name="number">
-
 <input type="submit">
-
-
-
-
-
 </form>
+</div>
+
+
 
 <?php
-$get_num= $_POST["number"];
-if($get_num%2==0){
-    echo "The Number is Even".$get_num;
+// PHP code to check whether the number 
+// is Even or Odd in Normal way
+$number=$_POST["number"];
+function check($number){
+    if($number % 2 == 0){
+        echo $number." is Even"; 
+    }
+    else{
+        echo $number." is Odd";
+    }
 }
-else{
-    echo "The number is odd".$get_num;
-}
-
+  
+// Driver Code
+// $number = 39;
+check($number)
 ?>
