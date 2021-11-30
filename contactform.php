@@ -1,4 +1,6 @@
 <?php
+// Adding session message
+session_start();
 $servername = "localhost";
 $database = "contactform";
 $username = "root";
@@ -8,9 +10,17 @@ if(isset($_POST['submit']))
 {    
      $firstname = $_POST['firstname'];
      $lastname = $_POST['lastname'];
-     $email = $_POST['email'];
+     $email = $_POST['email'];    
      $msg = $_POST['msg'];
-     $sql = "INSERT INTO `users_info` VALUES ('$firstname', '$lastname', '$email', '$msg')";
+        //   Form Validation
+if (empty($firstname) || empty($lastname)) {
+    $_SESSION['message']="Fill the Form";
+    $_SESSION['msg_type']="warning";
+    header("location:index.php?name=contactForm"); // Redirection after the submit
+    return false;
+}
+
+     $sql = "INSERT INTO `users_info` (firstname,lastname,email,msg) VALUES ('$firstname', '$lastname', '$email', '$msg')";
      if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
      } else {
@@ -21,7 +31,17 @@ if(isset($_POST['submit']))
 
 ?>
 
+<?php //Session Message 
+    if(isset($_SESSION['message'])):?>
+    <div class="alert alert-<?=$_SESSION['msg_type']?>">
 
+
+    <?php
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+    ?>
+        </div>
+        <?php endif?>
     <form action="index.php/?name=contactForm" method="post">
         <div class="mb-3">
             <input type="text" class="form-control" name="firstname" placeholder="First Name">
