@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <?php require_once 'process.php';?>
 
     <?php
@@ -28,10 +29,11 @@
     $result=$mysqli->query("SELECT * FROM data") or die($mysqli->error);
     ?>
     <div class="row justify-content-center"> 
+    <h1>To go List</h1>
       <table class="table">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Place</th>
             <th>Location</th>
             <th colspan="2">Action</th>
           </tr>
@@ -61,6 +63,7 @@
     }
     ?>
     <div class="row justify-content-center">
+    
 
 
     <form action="process.php" method="POST">
@@ -80,6 +83,7 @@
           <button type="submit" class="btn btn-info" name="update">Update</button>
           <?php else:?>
       <button type="submit" class="btn btn-primary" name="save">Save</button>
+      <a href="/phptest" class="btn btn-secondary">Back</a>
       <?php endif;?>
       </div>
     </form>

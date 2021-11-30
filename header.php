@@ -33,7 +33,10 @@
 	<a class="nav-link" href="index.php?name=mail">Email</a>
 	</li>
 	<li class="nav-item">
-	<a class="nav-link" href="/phpcrud/index.php?name=todo">To do</a>
+	<a class="nav-link" href="./todolist/index.php?name=todo">To do</a>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="./phpcrud/index.php?name=location">Location</a>
 	</li>
 	<li class="nav-item">
 	<a class="nav-link" href="index.php?name=posts">Posts</a>

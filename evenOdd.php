@@ -1,6 +1,6 @@
 
 <div class="container">
-<form action="evenOdd.php" method="post">
+<form action="phptest/evenOdd.php" method="post">
 <input type="number" name="number">
 <input type="submit">
 </form>

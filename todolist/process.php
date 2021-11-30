@@ -1,26 +1,25 @@
+
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "crud";
 
 // Create connection
-$mysqli=new mysqli('localhost','root','root','crud') or die(mysqli_error($mysqli));
-// Check connection
-if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  
-  // Send Data to the Database
-  if(isset($_POST['submit'])){
-      $task=$_POST['task'];
-  // Inserting values
-      $mysqli->query("INSERT INTO todo VALUES ('$task')") or die($mysqli->error);
-    
-        header("location:index.php");
-  }
-  ?>
+  die("Connection failed: " . $conn->connect_error);
+}
 
+$sql = "INSERT INTO todo (id,task)
+VALUES ('','$task')";
 
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
+$conn->close();
+?>

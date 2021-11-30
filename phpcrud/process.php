@@ -16,6 +16,14 @@ if(isset($_POST['save'])){
     $name=$_POST['name'];
     $location=$_POST['location'];
 // Inserting values
+if (empty($name) && empty($location)) {
+    $_SESSION['message']="Enter Place name and Location!";
+    $_SESSION['msg_type']="warning";
+    header("location:index.php");
+
+    // echo 'Form is empty';
+    return false;
+}
     $mysqli->query("INSERT INTO data(name,location) VALUES('$name','$location')") or die($mysqli->error);
       // Adding session msg
       $_SESSION['message']="Record has been saved !";

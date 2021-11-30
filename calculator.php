@@ -5,7 +5,7 @@
 
 <h1>My Calculator</h1><div class="container justify-content-md-center">
 
-<form action="index.php/?name=calculator" method="post">
+<form action="calculator.php" method="POST">
 
 <div class="input-group mb-3">
 
@@ -32,9 +32,9 @@
 </form>
 
 <?php
-$num1 = $_POST['num1'];
-$num2= $_POST['num2'];
-$operation= $_POST['operation'];
+$num1 = $_GET['num1'];
+$num2= $_GET['num2'];
+$operation= $_GET['operation'];
 if($operation=="+"){
     echo "The Answer is :". $num1 +$num2;
 }

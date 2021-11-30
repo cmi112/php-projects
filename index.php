@@ -27,7 +27,7 @@ if($_GET["name"]=="mail"){
 
 }
 if($_GET["name"]=="todo"){
-    include("phpcrud/index.php");
+    include("./todo/index.php");
 
 }
 if($_GET["name"]=="posts"){
