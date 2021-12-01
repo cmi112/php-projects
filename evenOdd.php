@@ -1,10 +1,19 @@
+<!-- Hero Section Start -->
 
-<div class="container">
-<form action="index.php/index.php?name=evenOdd" method="post">
-<input type="number" name="number">
-<input type="submit">
-</form>
+<div class="hero-section">
+<h1>Even Odd Checker</h1>
 </div>
+
+<!-- Hero Section End -->
+
+<form action="index.php?name=evenOdd" method="post">
+        <div class="mb-3">
+            <input type="number" class="form-control" name="number" placeholder="Enter Number">
+        </div>
+       
+     
+        <input type="submit" class="form-control btn btn-primary"  name="submit" placeholder="Username">
+    </form>
 
 
 

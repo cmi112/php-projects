@@ -9,7 +9,7 @@
 </div>
 <!-- Hero Section End -->
 
-<form action="calculator.php" method="POST">
+<form action="index.php?name=calculator" method="POST">
 
 <div class="input-group mb-3">
 
@@ -28,7 +28,7 @@
 </div>
 <div class="input-group mb-3">
 
-<input type="submit" class="form-control" name="submit" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+<input type="submit" class="form-control btn-primary" name="submit" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
 

@@ -18,12 +18,26 @@ if(isset($_POST['submit'])){
     }
 ?>
 
+<!-- Hero Section Start -->
+
+<div class="hero-section">
+<h1>Email !</h1>
+</div>
+
+<!-- Hero Section End -->
 
 
-<form action="" method="post">
-First Name: <input type="text" name="first_name"><br>
 
-Email: <input type="text" name="email"><br>
-Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-<input type="submit" name="submit" value="Submit">
-</form>
+<form action="index.php/?name=contactForm" method="post">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="first_name" placeholder="First Name">
+        </div>
+       
+        <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Write your email">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" name="message"  placeholder="Write your message Here" id="floatingTextarea"></textarea>
+        </div>
+        <input type="submit" class="form-control btn btn-primary"  name="submit" placeholder="Username">
+    </form>

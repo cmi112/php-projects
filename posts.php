@@ -41,6 +41,15 @@ if (empty($title) || empty($content)) {
 }
 
 ?>
+
+
+<!-- Hero Section Start -->
+
+<div class="hero-section">
+<h1>Blog Posts </h1>
+</div>
+
+<!-- Hero Section End -->
 <div class="container">
     <form action="index.php/?name=posts" method="post">
         <input type="text" class="form-control" name="title" placeholder="Title" >
@@ -61,22 +70,30 @@ if (empty($title) || empty($content)) {
     ?>
         </div>
         <?php endif?>
-<div class="container">
-
-<?php // Fetching data from DB
-    $mysqli=new mysqli('localhost','root','root','posts') or die(mysqli_error($mysqli));
-    $result=$mysqli->query("SELECT * FROM post") or die($mysqli->error);
-    ?>
-    <?php
-    while($row=$result->fetch_assoc()):
-    ?>
-    <div class="row">
-        <div class="col">
-            <h2><?php echo $row['title'];?></h2>
-            <p><?php echo $row['content'];?></p>
-            <p>Author : <?php echo $row['author']?? 'Unknown' ;?></p>
-            <span>Published : <?php echo $row['register_date'];?></span>
-        </div>
-    </div>
+<div class="container posts-list">
+<div class="row">
+    <?php // Fetching data from DB
+        $mysqli=new mysqli('localhost','root','root','posts') or die(mysqli_error($mysqli));
+        $result=$mysqli->query("SELECT * FROM post") or die($mysqli->error);
+        ?>
+        <?php
+        while($row=$result->fetch_assoc()):
+        ?>
+           
+                <div class="col col-3 col-md-4 py-md-5">
+                   <div class="card" style="width: 18rem;"> 
+                   <img src="https://media.sproutsocial.com/uploads/2020/08/best-times-to-post-2021-feature-image.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title"><?php echo $row['title'];?></h5>
+                        <p  class="card-text"><?php echo $row['content'];?></p>
+                        <p class="card-text">Author : <?php echo $row['author']?? 'Unknown' ;?></p>
+                        <span>Published : <?php echo $row['register_date'];?></span>
+                      
+                        </div>
+                     
+                    </div>
+                </div>
+            
     <?php endwhile;?>
+    </div>
 </div>

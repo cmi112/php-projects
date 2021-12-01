@@ -32,10 +32,7 @@ if(isset($_POST["submit"]))
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fetch image from database in PHP</title>
+
   <style>
   table img{
     width:100px; 
@@ -53,8 +50,13 @@ if(isset($_POST["submit"]))
   }
   
   </style>
-</head>
-<body>
+   <!-- Hero Section Start -->
+
+   <div class="hero-section">
+<h1>Image Collector !</h1>
+</div>
+
+<!-- Hero Section End -->
 
 <h2>Insert Data</h2>
 
@@ -111,5 +113,3 @@ while($data = mysqli_fetch_array($records))
 
 <?php mysqli_close($db);  // close connection ?>
 
-</body>
-</html>

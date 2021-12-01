@@ -1,4 +1,5 @@
 <?php
+include("/styles/styles.css");
 
 $db = mysqli_connect("localhost","root","root","recipes");  // database connection
 
@@ -38,10 +39,14 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 }
 ?>
  
+
+
 <!-- Hero Section Start -->
+
 <div class="hero-section">
 <h1>Welcome to Recipes World !</h1>
 </div>
+
 <!-- Hero Section End -->
 <!-- Add Recipes Section start -->
 <div class="container">
@@ -71,7 +76,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 
 
  <!-- Recipes liste -->
-<div class="container">
+<div class="container  recipes">
     <div class="row">
         <?php 
         $records = mysqli_query($db,"select * from recipe"); // fetch data from database
@@ -79,13 +84,13 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
         {
         ?>
 
-                <div class="col">
+                <div class="col col-6 col-md-4 py-md-5">
                     <div class="card" style="width: 18rem;">
                         <img src="recipes/images/<?php echo $data['image']; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $data['title']; ?></h5>
+                            <h5 class="card-title">Recipe Name : <?php echo $data['title']; ?></h5>
                             <p class="card-text"><?php echo $data['content']; ?></p>
-                            <span><?php echo $data['author']; ?></span>
+                            <span>Author : <?php echo $data['author']; ?></span>
                         </div>
                     </div>
                 </div>

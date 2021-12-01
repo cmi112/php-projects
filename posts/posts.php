@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
-</head>
-<body>
+<!-- Hero Section Start -->
+
+<div class="hero-section">
+<h1>Posts</h1>
+</div>
+
+<!-- Hero Section End -->
 <form action="posts.php" method="POST">
 <label>Title</label>
 <input type="text" name="title" >
@@ -14,5 +12,3 @@
 <button type="submit">Send</button>
 </form>
     
-</body>
-</html>

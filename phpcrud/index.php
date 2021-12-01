@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
+
 
     <?php require_once 'process.php';?>
 
@@ -29,7 +20,13 @@
     $result=$mysqli->query("SELECT * FROM data") or die($mysqli->error);
     ?>
     <div class="row justify-content-center"> 
-    <h1>To go List</h1>
+      <!-- Hero Section Start -->
+
+<div class="hero-section">
+<h1>To Go Places !</h1>
+</div>
+
+<!-- Hero Section End -->
       <table class="table">
         <thead>
           <tr>
@@ -89,5 +86,3 @@
     </form>
     </div>
     </div>
-</body>
-</html>

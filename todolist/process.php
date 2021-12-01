@@ -20,6 +20,7 @@ if (empty($task)) {
 }
 
      $sql = "INSERT INTO `todo` (task) VALUES ('$task')";
+     
      if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
      } else {

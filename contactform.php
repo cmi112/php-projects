@@ -42,6 +42,13 @@ if (empty($firstname) || empty($lastname)) {
     ?>
         </div>
         <?php endif?>
+<!-- Hero Section Start -->
+
+<div class="hero-section">
+<h1>Contact us !</h1>
+</div>
+
+<!-- Hero Section End -->
     <form action="index.php/?name=contactForm" method="post">
         <div class="mb-3">
             <input type="text" class="form-control" name="firstname" placeholder="First Name">
@@ -55,7 +62,7 @@ if (empty($firstname) || empty($lastname)) {
         <div class="mb-3">
             <textarea class="form-control" name="msg" placeholder="Write your message Here" id="floatingTextarea"></textarea>
         </div>
-        <input type="submit" class="form-control" name="submit" placeholder="Username">
+        <input type="submit" class="form-control btn btn-primary"  name="submit" placeholder="Username">
     </form>
 
 
