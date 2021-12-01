@@ -58,7 +58,7 @@ if(isset($_POST["submit"]))
 
 <h2>Insert Data</h2>
 
-<form action="index.php?name=recipes" method="post" enctype="multipart/form-data">
+<form action="index.php?name=data" method="post" enctype="multipart/form-data">
   <table border="2">
     <tr>
       <td>Enter Name</td>
