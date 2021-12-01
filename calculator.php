@@ -3,7 +3,11 @@
 
 <div class="container">
 
-<h1>My Calculator</h1><div class="container justify-content-md-center">
+<!-- Hero Section Start -->
+<div class="hero-section">
+<h1>Calculator!</h1>
+</div>
+<!-- Hero Section End -->
 
 <form action="calculator.php" method="POST">
 

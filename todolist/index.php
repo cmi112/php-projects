@@ -9,6 +9,17 @@
 </head>
 <body>
 <?php require_once 'process.php';?>
+<?php //Session Message 
+    if(isset($_SESSION['message'])):?>
+    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+
+
+    <?php
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+    ?>
+        </div>
+        <?php endif?>
     <div class="container">
         <form action="process.php" method="POST">
             <input type="text" name="task">

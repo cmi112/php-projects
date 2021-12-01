@@ -1,5 +1,6 @@
 <?php
-include("header.php")
+include("header.php");
+include("/styles/styles.css");
 
 ?>
 
@@ -32,6 +33,14 @@ if($_GET["name"]=="todo"){
 }
 if($_GET["name"]=="posts"){
     include("posts.php");
+
+}
+if($_GET["name"]=="recipes"){
+    include("./recipes/recipes.php");
+
+}
+if($_GET["name"]=="data"){
+    include("./recipes/index.php");
 
 }
 ?>
