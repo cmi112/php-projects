@@ -21,8 +21,8 @@
 <!-- Hero Section End -->
     <div class="container">
         <form action="index.php?name=todo" method="POST">
-            <input type="text" name="task">
-            <input type="submit" class="btn-primary">
+            <input type="text"class="form-control" name="task">
+            <input type="submit" class=" btn btn-primary">
         </form>
 
     </div>

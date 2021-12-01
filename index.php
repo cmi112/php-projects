@@ -7,7 +7,6 @@ include("/styles/styles.css");
 
 
 
-<div class="container">
     
 
 <?php
@@ -58,7 +57,7 @@ if($_GET["name"]=="data"){
 }
 ?>
 
-</div>
+
 
 <div class="container">
 <?php

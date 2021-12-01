@@ -1,5 +1,3 @@
-
-
     <?php require_once 'process.php';?>
 
     <?php
@@ -13,6 +11,11 @@
     ?>
         </div>
         <?php endif?>
+<!-- Hero Section Start -->
+<div class="hero-section">
+  <h1>To Go Places !</h1>
+</div>
+<!-- Hero Section End -->
     <div class="container">
 
     <?php
@@ -20,13 +23,6 @@
     $result=$mysqli->query("SELECT * FROM data") or die($mysqli->error);
     ?>
     <div class="row justify-content-center"> 
-      <!-- Hero Section Start -->
-
-<div class="hero-section">
-<h1>To Go Places !</h1>
-</div>
-
-<!-- Hero Section End -->
       <table class="table">
         <thead>
           <tr>

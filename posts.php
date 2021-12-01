@@ -51,7 +51,7 @@ if (empty($title) || empty($content)) {
 
 <!-- Hero Section End -->
 <div class="container">
-    <form action="index.php/?name=posts" method="post">
+    <form action="posts.php" method="post">
         <input type="text" class="form-control" name="title" placeholder="Title" >
         <textarea name="content"  class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
         <input type="text" class="form-control" name="author" placeholder="Author" >
@@ -71,7 +71,7 @@ if (empty($title) || empty($content)) {
         </div>
         <?php endif?>
 <div class="container posts-list">
-<div class="row">
+<div class="row g-2">
     <?php // Fetching data from DB
         $mysqli=new mysqli('localhost','root','root','posts') or die(mysqli_error($mysqli));
         $result=$mysqli->query("SELECT * FROM post") or die($mysqli->error);
@@ -80,7 +80,7 @@ if (empty($title) || empty($content)) {
         while($row=$result->fetch_assoc()):
         ?>
            
-                <div class="col col-3 col-md-4 py-md-5">
+                <div class="col col-3 col-md-4 g-2">
                    <div class="card" style="width: 18rem;"> 
                    <img src="https://media.sproutsocial.com/uploads/2020/08/best-times-to-post-2021-feature-image.png" class="card-img-top" alt="...">
                       <div class="card-body">

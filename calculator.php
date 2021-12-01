@@ -1,14 +1,13 @@
-
-<div id="content" style="padding: 4rem 0;">
-
-<div class="container">
-
 <!-- Hero Section Start -->
 <div class="hero-section">
 <h1>Calculator!</h1>
 </div>
 <!-- Hero Section End -->
 
+
+<div id="content" style="padding: 4rem 0;">
+
+<div class="container">
 <form action="index.php?name=calculator" method="POST">
 
 <div class="input-group mb-3">
