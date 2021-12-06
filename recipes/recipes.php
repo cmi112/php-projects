@@ -43,7 +43,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 
 <!-- Hero Section Start -->
 
-<div class="hero-section">
+<div class="hero-section text-center">
 <h1>Welcome to Recipes World !</h1>
 </div>
 
@@ -53,7 +53,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 <form action="index.php?name=recipes" method="post" enctype="multipart/form-data">
 <div class="mb-3">
 <label for="exampleFormControlInput1" class="form-label">Add Recipes: </label>
-<input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Enter the Name here">
+<input type="text" class="form-control" name="title" id="exampleFormControlInput1" >
 </div>
 <div class="mb-3">
 <label for="exampleFormControlTextarea1" class="form-label">Content</label>
@@ -65,7 +65,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 </div>
 <div class="mb-3">
 <label for="exampleFormControlInput1" class="form-label">Recipes Name: </label>
-<input type="text" class="form-control" id="exampleFormControlInput1"  name="author" placeholder="Author">
+<input type="text" class="form-control" id="exampleFormControlInput1"  name="author">
 </div>
 <input type="submit" class="btn btn-primary" name="submit" value="Post Your Recipe" >
 </form>

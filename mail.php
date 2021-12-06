@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
 <!-- Hero Section Start -->
 
-<div class="hero-section">
+<div class="hero-section text-center">
 <h1>Email !</h1>
 </div>
 
@@ -28,16 +28,22 @@ if(isset($_POST['submit'])){
 
 
 
-<form action="index.php/?name=contactForm" method="post">
-        <div class="mb-3">
-            <input type="text" class="form-control" name="first_name" placeholder="First Name">
-        </div>
-       
-        <div class="mb-3">
-            <input type="email" class="form-control" name="email" placeholder="Write your email">
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" name="message"  placeholder="Write your message Here" id="floatingTextarea"></textarea>
-        </div>
-        <input type="submit" class="form-control btn btn-primary"  name="submit" placeholder="Username">
-    </form>
+<div class="container d-flex justify-content-center ">
+    <form action="index.php/?name=contactForm" method="post" class="w-50">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">First Name</label>
+                <input type="text" class="form-control" name="first_name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" name="message" id="floatingTextarea"></textarea>
+            </div>
+            <div class="row justify-content-center">
+                <input type="submit" class="form-control btn btn-primary w-50 "  name="submit">
+             </div>
+        </form>
+</div>

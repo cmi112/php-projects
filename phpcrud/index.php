@@ -12,7 +12,7 @@
         </div>
         <?php endif?>
 <!-- Hero Section Start -->
-<div class="hero-section">
+<div class="hero-section text-center">
   <h1>To Go Places !</h1>
 </div>
 <!-- Hero Section End -->
@@ -23,7 +23,7 @@
     $result=$mysqli->query("SELECT * FROM data") or die($mysqli->error);
     ?>
     <div class="row justify-content-center"> 
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr>
             <th>Place</th>
@@ -37,8 +37,8 @@
           <td><?php echo $row['name'];?></td>
           <td><?php echo $row['location'];?></td>
           <td>
-            <a href="index.php?edit=<?php echo $row['id'];?>" class="btn btn-info"> Edit</a>
-            <a href="process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger"> Delete</a>
+            <a href="./phpcrud/index.php?edit=<?php echo $row['id'];?>" class="btn btn-info"> Edit</a>
+            <a href="./phpcrud/process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger"> Delete</a>
           </td>
         </tr>
        <?php endwhile;?>

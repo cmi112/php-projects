@@ -19,7 +19,7 @@ if(isset($_POST['save'])){
 if (empty($name) && empty($location)) {
     $_SESSION['message']="Enter Place name and Location!";
     $_SESSION['msg_type']="warning";
-    header("location:index.php");
+    header("location:index.php?name=location");
 
     // echo 'Form is empty';
     return false;
@@ -28,7 +28,7 @@ if (empty($name) && empty($location)) {
       // Adding session msg
       $_SESSION['message']="Record has been saved !";
       $_SESSION['msg_type']="success";
-      header("location:index.php");
+      header("location:index.php?name=location");
 }
 
 // Delete item from db
@@ -38,7 +38,7 @@ if(isset($_GET['delete'])){
        // Adding session msg
        $_SESSION['message']="Record has been Deleted!";
        $_SESSION['msg_type']="danger";
-       header("location:index.php");
+       header("location:index.php?name=location");
 }
 
 // Edit button 
@@ -64,7 +64,7 @@ if(isset($_POST['update'])){
      // Adding session msg
      $_SESSION['message']="Record has been Updated!";
      $_SESSION['msg_type']="warning";
-     header("location:index.php");
+     header("location:index.php?name=location");
 
 }
 

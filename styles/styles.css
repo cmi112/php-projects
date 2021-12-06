@@ -5,13 +5,29 @@
     margin-top:40px;
     margin-bottom:40px;
     /* background-color:lightgray; */
-    text-align:center;
+    /* text-align:center; */
     padding:10px;
    background-image: url("https://image.shutterstock.com/image-photo/businessman-suit-cape-hero-stand-260nw-1035824698.jpg");
     background-size: cover;
     background-position: center;
     background-attachment:inherit;
-    color:#fff
+    color:#fff;
+    
+
+}
+.calculator{
+    height:200px;
+    width:100%;
+    margin-top:40px;
+    margin-bottom:40px;
+    /* background-color:lightgray; */
+    /* text-align:center; */
+    padding:10px;
+   background-image: url("https://www.academic-hero.de/fileadmin/_processed_/6/5/csm_Academic_Hero_3cced4dc65.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment:inherit;
+    color:#fff;
     
 
 }
@@ -22,7 +38,9 @@
     margin-top: 10%;
 
 }
-
+.even-odd-answer{
+    margin-top:0 auto;
+}
 
 footer {
   position: relative;

@@ -39,58 +39,59 @@ if(isset($_POST["submit"]))
     height:100px;
    
   }
-  tr{
-    border:2px solid;
-    
-  }
-  td {
-    border:2px solid;
-    padding:10px;
-
-  }
+ 
   
   </style>
    <!-- Hero Section Start -->
 
-   <div class="hero-section">
+   <div class="hero-section text-center">
 <h1>Image Collector !</h1>
 </div>
 
 <!-- Hero Section End -->
 
-<h2>Insert Data</h2>
+<div class="container d-flex justify-content-center">
+  <form action="index.php?name=data" method="post" class="w-50" enctype="multipart/form-data">
+      <table border="2">
+        <tr>
+          <td>Enter Name</td>
+          <td><input type="text" name="text" class="form-control" placeholder="Enter Name" Required></td>
+        </tr>
+        <tr>
+          <td>Select Image</td>
+          <td><input type="file" name="image" class="form-control" Required></td>
+        </tr>
+        <tr>
+        <div class="row justify-content-center">
+          <td colspan="2"><input type="submit" name="submit"  class="form-control btn btn-primary btn-sm m-50" value="Upload"></td>			
+        </div>
+        </tr>
+      </table>
+  </form>
+</div>
 
-<form action="index.php?name=data" method="post" enctype="multipart/form-data">
-  <table border="2">
-    <tr>
-      <td>Enter Name</td>
-      <td><input type="text" name="text" placeholder="Enter Name" Required></td>
-    </tr>
-    <tr>
-      <td>Select Image</td>
-      <td><input type="file" name="image" Required></td>
-    </tr>
-    <tr>
-      <td colspan="2"><input type="submit" name="submit" value="Upload"></td>			
-    </tr>
-  </table>
-</form>
 
 <hr/>
 
 
 
 
-<h2>All Records</h2>
 
-<table border="2">
-  <tr>
-    <td>ID</td>
-    <td>Text</td>
-    <td>Images</td>
-  </tr>
 
-<?php
+
+<div class="container">
+
+
+<div class="row justify-content-center"> 
+  <table class="table table-hover">
+    <thead>
+      <tr >
+        <th>ID</th>
+        <th>Name</th>
+        <th colspan="2">Images</th>
+      </tr>
+    </thead>
+    <?php
 
 
 
@@ -99,17 +100,14 @@ $records = mysqli_query($db,"select * from images"); // fetch data from database
 while($data = mysqli_fetch_array($records))
 {
 ?>
-  <tr>
-    <td><?php echo $data['id']; ?></td>
-    <td><?php echo $data['text']; ?></td>
-    <!-- <td><img src="<?php echo $data['images']; ?>" width="100" height="100" ></td> -->
-   <td><?php echo "<img  src='recipes/images/".$data['image']. "'>";?></td>
-  </tr>	
-<?php
-}
-?>
-
-</table>
-
-<?php mysqli_close($db);  // close connection ?>
-
+    <tr>
+      <td><?php echo $data['id'];?></td>
+      <td><?php echo $data['text'];?></td>
+      <td>
+      <?php echo "<img class='img-fluid' src='recipes/images/".$data['image']. "'>";?>
+      </td>
+    </tr>
+ <?php }?>
+  
+  </table>
+</div>

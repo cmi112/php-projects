@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
 if (empty($title) || empty($content)) {
     $_SESSION['message']="Fill the Form!";
     $_SESSION['msg_type']="warning";
-    header("location:index.php/index.php?name=posts"); // Redirection after the submit
+    header("location:index.php?name=posts"); // Redirection after the submit
     return false;
 }
 
@@ -45,17 +45,27 @@ if (empty($title) || empty($content)) {
 
 <!-- Hero Section Start -->
 
-<div class="hero-section">
+<div class="hero-section text-center">
 <h1>Blog Posts </h1>
 </div>
 
 <!-- Hero Section End -->
-<div class="container">
-    <form action="posts.php" method="post">
-        <input type="text" class="form-control" name="title" placeholder="Title" >
-        <textarea name="content"  class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
-        <input type="text" class="form-control" name="author" placeholder="Author" >
-        <input type="submit" name="submit">
+<div class="container d-flex justify-content-center">
+    <form action="index.php?name=posts" method="post" class="w-50 align-items-center  m-5">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea name="content"  class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Author</label>
+            <input type="text" class="form-control" name="author">
+        </div>
+
+        <input type="submit" name="submit" class="btn btn-primary">
     </form>
 </div>
 
@@ -71,7 +81,7 @@ if (empty($title) || empty($content)) {
         </div>
         <?php endif?>
 <div class="container posts-list">
-<div class="row g-2">
+<div class="row g-4 ">
     <?php // Fetching data from DB
         $mysqli=new mysqli('localhost','root','root','posts') or die(mysqli_error($mysqli));
         $result=$mysqli->query("SELECT * FROM post") or die($mysqli->error);
@@ -80,8 +90,8 @@ if (empty($title) || empty($content)) {
         while($row=$result->fetch_assoc()):
         ?>
            
-                <div class="col col-3 col-md-4 g-2">
-                   <div class="card" style="width: 18rem;"> 
+                <div class="col col-md">
+                   <div class="card g-2" style="width: 18rem;"> 
                    <img src="https://media.sproutsocial.com/uploads/2020/08/best-times-to-post-2021-feature-image.png" class="card-img-top" alt="...">
                       <div class="card-body">
                       <h5 class="card-title"><?php echo $row['title'];?></h5>
