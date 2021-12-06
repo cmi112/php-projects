@@ -14,8 +14,9 @@
 <div class="container posts-list">
 <div class="row g-4 ">
     <?php // Fetching data from DB
+        $id=$_GET['id'];
         $mysqli=new mysqli('localhost','root','root','posts') or die(mysqli_error($mysqli));
-        $result=$mysqli->query("SELECT * FROM post") or die($mysqli->error);
+        $result=$mysqli->query("SELECT * FROM post WHERE id=$id") or die($mysqli->error);
         ?>
         <?php
         while($row=$result->fetch_assoc()):

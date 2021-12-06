@@ -56,13 +56,3 @@ footer {
 }
 
 
-/* Navbar */
-.nav-link{
-    background-color:green!important;
-}
-#navbarDropdown{
-    background-color:green;
-}
-ul .navbar-nav {
-    color:red;
-}

@@ -29,21 +29,21 @@ if(isset($_POST['submit'])){
 
 
 <div class="container d-flex justify-content-center ">
-    <form action="index.php/?name=contactForm" method="post" class="w-50">
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">First Name</label>
-                <input type="text" class="form-control" name="first_name">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" name="message" id="floatingTextarea"></textarea>
-            </div>
-            <div class="row justify-content-center">
-                <input type="submit" class="form-control btn btn-primary w-50 "  name="submit">
-             </div>
-        </form>
+    <form action="index.php/?name=email" method="post" class="w-50">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="first_name">          
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" name="message" id="floatingTextarea"></textarea>
+        </div>
+        <div class="row justify-content-center">
+            <input type="submit" class="form-control btn btn-primary w-50 "  name="submit">
+         </div>
+    </form>
 </div>

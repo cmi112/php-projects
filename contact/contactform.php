@@ -22,7 +22,7 @@ if (empty($firstname) || empty($lastname)) {
 
      $sql = "INSERT INTO `users_info` (firstname,lastname,email,msg) VALUES ('$firstname', '$lastname', '$email', '$msg')";
      if (mysqli_query($conn, $sql)) {
-        echo "New record has been added successfully !";
+        echo "Your Message has been sent successfully !";
      } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
      }

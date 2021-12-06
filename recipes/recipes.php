@@ -90,7 +90,21 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
                         <img src="recipes/images/<?php echo $data['image']; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Recipe Name : <?php echo $data['title']; ?></h5>
-                            <p class="card-text"><?php echo $data['content']; ?> </p>
+                            <p class="card-text"><?php
+                            $string=strip_tags($data['content']);
+                            if(strlen($string)>100):
+                                $stringCut=substr($string,0,200);
+                                $endPoint=strrpos($stringCut,'');
+                                $string=$endPoint?substr($stringCut,0,$endPoint):substr($stringCut,0);
+                                $string.='...<a href="recipe.php">Read more</a>';
+                            endif;
+                            echo $string;
+                            
+                          
+                            
+                            
+                            
+                        ?> </p>
                             <span>Author : <?php echo $data['author']; ?></span>
                         </div>
                     </div>

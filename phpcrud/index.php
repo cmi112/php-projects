@@ -1,4 +1,7 @@
-    <?php require_once 'process.php';?>
+    <?php require_once 'process.php';
+    require_once './header.php';
+   
+    ?>
 
     <?php
     if(isset($_SESSION['message'])):?>
@@ -37,7 +40,7 @@
           <td><?php echo $row['name'];?></td>
           <td><?php echo $row['location'];?></td>
           <td>
-            <a href="./phpcrud/index.php?edit=<?php echo $row['id'];?>" class="btn btn-info"> Edit</a>
+            <a href="./phpcrud/process.php?edit=<?php echo $row['id'];?>" class="btn btn-info"> Edit</a>
             <a href="./phpcrud/process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger"> Delete</a>
           </td>
         </tr>
@@ -59,7 +62,7 @@
     
 
 
-    <form action="process.php" method="POST">
+    <form action="index.php?name=location" method="POST">
       <input type="hidden" name="id" value="<?php echo $id;?>">
         <div class="form-group">
         <label>Name </label>

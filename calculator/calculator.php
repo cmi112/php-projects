@@ -1,7 +1,6 @@
 <!-- Hero Section Start -->
 <div class="calculator text-center" id="calculator">
-
-<h1>Calculator!</h1>
+    <h1>Calculator!</h1>
 </div>
 <!-- Hero Section End -->
 <div class="container d-flex justify-content-center">
