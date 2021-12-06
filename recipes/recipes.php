@@ -14,6 +14,7 @@ if(!$db)
 
 
 
+
 if(isset($_POST["submit"]))
 {
   $target="recipes/images/".basename($_FILES['image']['name']);
@@ -76,7 +77,7 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
 
 
  <!-- Recipes liste -->
-<div class="container  recipes">
+<div class="container   recipes">
     <div class="row">
         <?php 
         $records = mysqli_query($db,"select * from recipe"); // fetch data from database
@@ -84,12 +85,12 @@ $sql ="INSERT INTO recipe (title,content,image,author) VALUES ('$title','$conten
         {
         ?>
 
-                <div class="col col-6 col-md-4 py-md-5">
+                <div class="col col-lg-4 col-md-6 col-sm-12 g-5 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <img src="recipes/images/<?php echo $data['image']; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Recipe Name : <?php echo $data['title']; ?></h5>
-                            <p class="card-text"><?php echo $data['content']; ?></p>
+                            <p class="card-text"><?php echo $data['content']; ?> </p>
                             <span>Author : <?php echo $data['author']; ?></span>
                         </div>
                     </div>

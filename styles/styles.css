@@ -15,7 +15,7 @@
     
 
 }
-.calculator{
+#calculator{
     height:200px;
     width:100%;
     margin-top:40px;
@@ -53,4 +53,16 @@ footer {
   text-align: center;
   margin-top: 10%;
   padding: 10px;
+}
+
+
+/* Navbar */
+.nav-link{
+    background-color:green!important;
+}
+#navbarDropdown{
+    background-color:green;
+}
+ul .navbar-nav {
+    color:red;
 }

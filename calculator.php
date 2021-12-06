@@ -1,5 +1,5 @@
 <!-- Hero Section Start -->
-<div class="calculator text-center">
+<div class="calculator text-center" id="calculator">
 
 <h1>Calculator!</h1>
 </div>

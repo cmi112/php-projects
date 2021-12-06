@@ -19,7 +19,7 @@
 </div>
 
 <!-- Hero Section End -->
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-center">
         <form action="index.php?name=todo" method="POST" class="w-50 align-items-center">
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Add to do</label>

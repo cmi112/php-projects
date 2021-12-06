@@ -90,12 +90,21 @@ if (empty($title) || empty($content)) {
         while($row=$result->fetch_assoc()):
         ?>
            
-                <div class="col col-md">
+                <div class="col col-lg-4 col-md-6 col-sm-12 g-5 d-flex justify-content-center">
                    <div class="card g-2" style="width: 18rem;"> 
                    <img src="https://media.sproutsocial.com/uploads/2020/08/best-times-to-post-2021-feature-image.png" class="card-img-top" alt="...">
                       <div class="card-body">
                       <h5 class="card-title"><?php echo $row['title'];?></h5>
-                        <p  class="card-text"><?php echo $row['content'];?></p>
+                        <p  class="card-text"><?php $string=strip_tags($row['content']);
+                        if(strlen($string)>100):
+                            $stringCut=substr($string,0,100);
+                            $endPoint=strrpos($stringCut,'');
+                            $string=$endPoint?substr($stringCut,0,$endPoint):substr($stringCut,0);
+                            $string.='...<a href="post.php">Read more</a>';
+                        endif;
+                        echo $string;
+                        
+                        ?></p>
                         <p class="card-text">Author : <?php echo $row['author']?? 'Unknown' ;?></p>
                         <span>Published : <?php echo $row['register_date'];?></span>
                       
@@ -107,3 +116,4 @@ if (empty($title) || empty($content)) {
     <?php endwhile;?>
     </div>
 </div>
+
